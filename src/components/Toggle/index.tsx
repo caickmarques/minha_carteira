@@ -6,7 +6,7 @@ const Toggle: React.FC = () => (
     <Container>
         <ToggleLabel>Light</ToggleLabel>
         <ToggleSelector
-            checked
+            checked={false}
             checkedIcon={false}
             uncheckedIcon={false}
             onChange={() => console.log('mudou')}

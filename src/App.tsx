@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../src/styles/GlobalStyles';
 import Layout from './components/Layout';
+import List from './pages/List';
 import dark from './styles/themes/dark';
 
 
@@ -9,7 +10,9 @@ const App: React.FC = () => {
     return (
         <ThemeProvider theme={dark}>
             <GlobalStyles />
-            <Layout />
+            <Layout>
+                <List />
+            </Layout>
         </ThemeProvider>
     )
 }
