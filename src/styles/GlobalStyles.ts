@@ -19,4 +19,8 @@ export default createGlobalStyle`
     button {
         cursor: pointer;
     }
+
+    a:-webkit-any-link {
+  text-decoration: none;
+}
 `;
