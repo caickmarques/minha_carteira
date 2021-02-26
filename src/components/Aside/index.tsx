@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Header, LogoImg, MenuContainer, MenuItemLink, Title } from './styles';
 import logo from '../../assets/logo.svg';
 import { MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp } from "react-icons/md";
-import { Link } from 'react-router-dom';
+
 
 const Aside: React.FC = () => {
     return (
@@ -13,23 +13,18 @@ const Aside: React.FC = () => {
             </Header>
 
             <MenuContainer>
-                <Link to='/dashboard'>
-                    <MenuItemLink>
-                        <MdDashboard /> Dashboard
-                </MenuItemLink>
-                </Link>
 
-                <Link to='/list/entry-balance'>
-                    <MenuItemLink>
-                        <MdArrowUpward /> Entradas
+                <MenuItemLink href='/dashboard'>
+                    <MdDashboard /> Dashboard
                 </MenuItemLink>
-                </Link>
 
-                <Link to='/list/exit-balance'>
-                    <MenuItemLink>
-                        <MdArrowDownward /> Saídas
+                <MenuItemLink href='/list/entry-balance'>
+                    <MdArrowUpward /> Entradas
                 </MenuItemLink>
-                </Link>
+
+                <MenuItemLink href='/list/exit-balance'>
+                    <MdArrowDownward /> Saídas
+                </MenuItemLink>
 
                 <MenuItemLink href="#">
                     <MdExitToApp /> Sair
