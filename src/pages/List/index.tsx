@@ -8,7 +8,6 @@ import expenses from '../../repositories/expenses';
 import formatCurrency from '../../utils/formatCurrency';
 import formatDate from '../../utils/formatDate';
 import listOfMonths from '../../utils/months';
-import { useLocation } from 'react-router-dom';
 import { v4 as uuid_v4 } from 'uuid';
 
 interface IRouteParams {
