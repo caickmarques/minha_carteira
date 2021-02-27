@@ -8,7 +8,8 @@ import expenses from '../../repositories/expenses';
 import formatCurrency from '../../utils/formatCurrency';
 import formatDate from '../../utils/formatDate';
 import listOfMonths from '../../utils/months';
-import { uuid } from 'uuidv4';
+import { useLocation } from 'react-router-dom';
+import { v4 as uuid_v4 } from 'uuid';
 
 interface IRouteParams {
     match: {
@@ -79,6 +80,8 @@ const List: React.FC<IRouteParams> = ({ match }) => {
     }, []);
 
     useEffect(() => {
+        console.log(ListData);
+
         const filteredData = ListData.filter(item => {
             const date = new Date(item.date);
             const month = String(date.getMonth() + 1);
@@ -86,10 +89,10 @@ const List: React.FC<IRouteParams> = ({ match }) => {
             return month === monthSelected && year === yearSelected;
         });
 
+
         const formattedData = filteredData.map(item => {
-            console.log(item);
             return {
-                id: uuid(),
+                id: uuid_v4(),
                 description: item.description,
                 amountFormatted: formatCurrency(Number(item.amount)),
                 frequency: item.frequency,

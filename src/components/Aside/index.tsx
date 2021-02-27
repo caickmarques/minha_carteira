@@ -33,7 +33,7 @@ const Aside: React.FC = () => {
                 </MenuItemLink>
                 </Link>
 
-                <MenuItemLink href="#">
+                <MenuItemLink>
                     <MdExitToApp /> Sair
                 </MenuItemLink>
 

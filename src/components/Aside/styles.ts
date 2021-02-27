@@ -27,7 +27,7 @@ export const MenuContainer = styled.nav`
     flex-direction: column;
     margin-top: 50px;
 `;
-export const MenuItemLink = styled.a`
+export const MenuItemLink = styled.p`
     color: ${props => props.theme.colors.info};
     text-decoration: none;
     margin: 7px 0;
