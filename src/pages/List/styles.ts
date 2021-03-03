@@ -15,6 +15,7 @@ export const Filters = styled.div`
         color: ${props => props.theme.colors.white};
         margin: 0 10px;
         transition: opacity .3s;
+        opacity: .4;
 
         &:hover{
             opacity: .7;
@@ -27,7 +28,7 @@ export const Filters = styled.div`
             width: 55px;
             margin: 0 auto;
             border-radius: 5px;
-            border: 8px solid ${props => props.theme.colors.warning};
+            border: 8px solid ${props => props.theme.colors.sucess};
         }
 
     .eventual::after{
@@ -36,6 +37,11 @@ export const Filters = styled.div`
             width: 55px;
             margin: 0 auto;
             border-radius: 5px;
-            border: 8px solid ${props => props.theme.colors.sucess};
+            border: 8px solid ${props => props.theme.colors.warning};
         }
+    
+    .tag-actived{
+        opacity: 1;
+    }
+
 `;
