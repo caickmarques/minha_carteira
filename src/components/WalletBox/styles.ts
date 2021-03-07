@@ -12,14 +12,17 @@ export const Container = styled.div<IContainerProps>`
     color: ${props => props.theme.colors.white};
     border-radius: 7px;
     padding: 10px 20px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
     > img{
         height: 110%;
         position: absolute;
         top: -10px;
-        right: -30px;
+        align-self: flex-end;
         opacity: .3;
     }
     >span {
